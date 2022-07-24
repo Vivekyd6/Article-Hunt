@@ -4,7 +4,7 @@ import Form from './Form';
 // import {Link} from 'react-router-dom'
 const App = () => {
   const [articles, setArticles] = useState([]);
-  const [term, setTerm] = useState('Articles');
+  const [term, setTerm] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const App = () => {
       <header className="flex items-center justify-between bg-black text-white p-4">
         <div className="logo">
         
-         <h2 className="font-bold text-xl md:text-2xl lg:text-3xl"> VY Article Website
+         <h2 className="font-bold text-xl md:text-2xl lg:text-3xl"> VY Article 
           </h2>
     
         </div>
@@ -46,7 +46,7 @@ const App = () => {
         <div className="overlay">
         {/* <Header/> */}
           <h1 className="text-4xl font-bold capitalize  text-white text-center mb-5 lg:text-7xl">
-            Viewing articles about {term}
+           { term? `Viewing articles about ${term}`:"Search articles" }
           </h1>
           <Form searchText={(text) => setTerm(text)} />
         </div>
@@ -58,8 +58,8 @@ const App = () => {
             const { abstract ,headline: { main }, byline: { original }, lead_paragraph, news_desk, section_name, web_url, _id, word_count } = article
             return (
 
-              <article key={_id} className=" bg-white py-10 px-5 rounded-lg md:w-[70%] mx-auto lg:w-[70%] mx-auto">
-                <h2 className="font-bold text-2xl mb-2">{main}</h2>
+              <article key={_id} className=" bg-white py-10 px-5  bg-base-200 rounded-lg md:w-[70%] mx-auto lg:w-[70%] mx-auto">
+                <h2 className="font-bold text-2xl mb-2 ">{main}</h2>
 <p>{abstract}</p>
                 <p>{lead_paragraph}</p>
                 <ul className="my-4">
