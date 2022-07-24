@@ -17,7 +17,7 @@ const Header = () => {
         <nav>
           <ul className="flex">
             <li className="mr-5 lg:text-lg"><button> <Link to="/">Home</Link></button></li>
-            {/* <li className="lg:text-lg"> <button> <Link to="/blog">Blog</Link> </button> </li> */}
+            <li className="lg:text-lg"> <button>About</button> </li>
           </ul>
         </nav>
       </header>
