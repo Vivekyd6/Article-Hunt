@@ -30,7 +30,7 @@ const App = () => {
       <header className="flex items-center justify-between bg-black text-white p-4">
         <div className="logo">
         
-         <h2 className="font-bold text-xl md:text-2xl lg:text-3xl"> VY Article 
+         <h2 className="font-bold text-xl md:text-2xl lg:text-3xl"> ArticleHunt
           </h2>
     
         </div>
@@ -58,7 +58,7 @@ const App = () => {
             const { abstract ,headline: { main }, byline: { original }, lead_paragraph, news_desk, section_name, web_url, _id, word_count } = article
             return (
 
-              <article key={_id} className=" bg-white py-10 px-5  bg-base-200 rounded-lg md:w-[70%] mx-auto lg:w-[70%] mx-auto">
+              <article key={_id} className=" bg-white py-10 px-5  rounded-lg md:w-[70%] mx-auto lg:w-[70%] mx-auto">
                 <h2 className="font-bold text-2xl mb-2 ">{main}</h2>
 <p>{abstract}</p>
                 <p>{lead_paragraph}</p>
